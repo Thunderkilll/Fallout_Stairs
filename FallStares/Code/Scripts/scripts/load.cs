@@ -7,6 +7,7 @@ public class load : MonoBehaviour {
     public GameObject MainMenu;
     public GameObject Gameover;
     public GameObject ScoreUi;
+    public GameObject creditsUI;
     public static load instance;
     private void Awake()
     {
@@ -37,7 +38,10 @@ public class load : MonoBehaviour {
         Debug.Log("Quit");
         AppHelper.Quit();
     }
-
+    public void CreditsGame()
+    {
+        creditsUI.SetActive(true);
+    }
     public void GameOver()
     {
         Gameover.SetActive(true);
